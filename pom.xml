@@ -43,18 +43,6 @@
             </dependency>
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-module-simple</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>simpleapp-jpa-module-simple-tests</artifactId>
-                <version>${project.version}</version>
-                <scope>test</scope>
-                <type>test-jar</type>
-            </dependency>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
                 <artifactId>simpleapp-jpa-webapp</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -91,8 +79,6 @@
     <modules>
         <module>module-petowner</module>
         <module>module-visit</module>
-        <module>module-simple</module>
-        <module>module-simple-tests</module>
         <module>webapp</module>
         <module>webapp-tests</module>
     </modules>

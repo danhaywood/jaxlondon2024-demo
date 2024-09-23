@@ -1,5 +1,8 @@
 package domainapp.webapp.application.services.health;
 
+import domainapp.modules.petowner.dom.petowner.PetOwners;
+import domainapp.webapp.application.ApplicationModule;
+
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -8,23 +11,21 @@ import org.springframework.stereotype.Service;
 import org.apache.causeway.applib.services.health.Health;
 import org.apache.causeway.applib.services.health.HealthCheckService;
 
-import domainapp.modules.simple.dom.so.SimpleObjects;
-
 @Service
-@Named("domainapp.HealthCheckServiceImpl")
+@Named(ApplicationModule.NAMESPACE + ".HealthCheckServiceImpl")
 public class HealthCheckServiceImpl implements HealthCheckService {
 
-    private final SimpleObjects simpleObjects;
+    private final PetOwners petOwners;
 
     @Inject
-    public HealthCheckServiceImpl(SimpleObjects simpleObjects) {
-        this.simpleObjects = simpleObjects;
+    public HealthCheckServiceImpl(PetOwners petOwners) {
+        this.petOwners = petOwners;
     }
 
     @Override
     public Health check() {
         try {
-            simpleObjects.ping();
+            petOwners.ping();
             return Health.ok();
         } catch (Exception ex) {
             return Health.error(ex);

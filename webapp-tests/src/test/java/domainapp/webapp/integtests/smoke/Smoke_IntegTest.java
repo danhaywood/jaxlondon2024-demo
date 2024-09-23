@@ -15,29 +15,29 @@ import org.springframework.transaction.annotation.Transactional;
 import org.apache.causeway.applib.services.wrapper.InvalidException;
 import org.apache.causeway.applib.services.xactn.TransactionService;
 
-import domainapp.modules.simple.dom.so.SimpleObject;
-import domainapp.modules.simple.dom.so.SimpleObjects;
+import domainapp.modules.petowner.dom.petowner.PetOwner;
+import domainapp.modules.petowner.dom.petowner.PetOwners;
 import domainapp.webapp.integtests.WebAppIntegTestAbstract;
 
 @DirtiesContext
 @Transactional
 class Smoke_IntegTest extends WebAppIntegTestAbstract {
 
-    @Inject SimpleObjects menu;
+    @Inject PetOwners menu;
     @Inject TransactionService transactionService;
 
     @Test
     void happy_case() {
 
         // when
-        List<SimpleObject> all = wrap(menu).listAll();
+        List<PetOwner> all = wrap(menu).listAll();
 
         // then
         assertThat(all).isEmpty();
 
 
         // when
-        final SimpleObject fred = wrap(menu).create("Fred");
+        final PetOwner fred = wrap(menu).create("Frederick", "Fred", null, null);
         transactionService.flushTransaction();
 
         // then
@@ -47,7 +47,7 @@ class Smoke_IntegTest extends WebAppIntegTestAbstract {
 
 
         // when
-        final SimpleObject bill = wrap(menu).create("Bill");
+        final PetOwner bill = wrap(menu).create("William", "Bill", null, null);
         transactionService.flushTransaction();
 
         // then

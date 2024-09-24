@@ -46,3 +46,5 @@ create-db-schema.sql
 
 test.http
 node_modules
+
+v3.marker

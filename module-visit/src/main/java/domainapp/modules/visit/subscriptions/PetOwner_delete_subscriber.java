@@ -1,15 +1,15 @@
 package domainapp.modules.visit.subscriptions;
 
-import domainapp.modules.petowner.dom.petowner.PetOwner;
-import domainapp.modules.visit.dom.visit.Visit;
-import domainapp.modules.visit.dom.visit.VisitRepository;
-
 import java.util.List;
 
 import javax.inject.Inject;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+
+import domainapp.modules.petowner.dom.petowner.PetOwner;
+import domainapp.modules.visit.dom.visit.Visit;
+import domainapp.modules.visit.dom.visit.VisitRepository;
 
 @Component
 public class PetOwner_delete_subscriber {

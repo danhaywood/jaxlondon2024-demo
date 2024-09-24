@@ -5,36 +5,26 @@ import java.util.List;
 import javax.annotation.Priority;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.Column;
 import javax.persistence.TypedQuery;
 
 import org.apache.causeway.applib.annotation.Action;
 import org.apache.causeway.applib.annotation.ActionLayout;
 import org.apache.causeway.applib.annotation.DomainService;
-import org.apache.causeway.applib.annotation.Editing;
 import org.apache.causeway.applib.annotation.Optionality;
 import org.apache.causeway.applib.annotation.Parameter;
 import org.apache.causeway.applib.annotation.PriorityPrecedence;
 import org.apache.causeway.applib.annotation.PromptStyle;
-import org.apache.causeway.applib.annotation.Property;
-import org.apache.causeway.applib.annotation.PropertyLayout;
 import org.apache.causeway.applib.annotation.SemanticsOf;
-import org.apache.causeway.applib.layout.LayoutConstants;
 import org.apache.causeway.applib.query.Query;
 import org.apache.causeway.applib.services.repository.RepositoryService;
 import org.apache.causeway.persistence.jpa.applib.services.JpaSupportService;
 
-import domainapp.modules.petowner.types.PhoneNumber;
-
-import domainapp.modules.petowner.value.EmailAddress;
-
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import domainapp.modules.petowner.PetOwnerModule;
 import domainapp.modules.petowner.types.Name;
-
-import lombok.Setter;
+import domainapp.modules.petowner.types.PhoneNumber;
+import domainapp.modules.petowner.value.EmailAddress;
 
 @Named(PetOwnerModule.NAMESPACE + ".PetOwners")
 @DomainService

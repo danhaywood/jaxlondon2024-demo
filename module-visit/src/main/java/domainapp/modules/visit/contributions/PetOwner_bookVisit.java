@@ -17,8 +17,6 @@ import domainapp.modules.petowner.dom.pet.Pet;
 import domainapp.modules.petowner.dom.petowner.PetOwner;
 import domainapp.modules.visit.dom.visit.Visit;
 
-import lombok.val;
-
 @Action
 @ActionLayout(associateWith = "visits")
 @RequiredArgsConstructor
@@ -47,7 +45,7 @@ public class PetOwner_bookVisit {
     }
     @MemberSupport
     public String validate1Act(LocalDateTime visitAt) {
-        val officeHoursTomorrow = officeHoursTomorrow();
+        final var officeHoursTomorrow = officeHoursTomorrow();
         if (visitAt.isBefore(officeHoursTomorrow)) {
             return "Must book in the future";
         }

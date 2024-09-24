@@ -1,15 +1,5 @@
 package domainapp.modules.visit.dom.visit;
 
-import domainapp.modules.petowner.dom.pet.Pet;
-
-import domainapp.modules.visit.VisitModule;
-
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
@@ -38,6 +28,15 @@ import org.apache.causeway.applib.annotation.Publishing;
 import org.apache.causeway.applib.jaxb.PersistentEntityAdapter;
 import org.apache.causeway.applib.services.title.TitleService;
 import org.apache.causeway.persistence.jpa.applib.integration.CausewayEntityListener;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import domainapp.modules.petowner.dom.pet.Pet;
+import domainapp.modules.visit.VisitModule;
 
 @Entity
 @Table(

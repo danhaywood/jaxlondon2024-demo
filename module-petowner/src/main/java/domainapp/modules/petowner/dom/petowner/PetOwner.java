@@ -64,7 +64,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.val;
 
 import domainapp.modules.petowner.PetOwnerModule;
 import domainapp.modules.petowner.dom.pet.Pet;
@@ -116,7 +115,7 @@ public class PetOwner implements Comparable<PetOwner>, CalendarEventable {
     private long version;
 
     public static PetOwner withName(final String name) {
-        val PetOwner = new PetOwner();
+        final var PetOwner = new PetOwner();
         PetOwner.setName(name);
         return PetOwner;
     }

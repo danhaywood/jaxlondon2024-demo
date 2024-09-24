@@ -1,10 +1,8 @@
 package domainapp.modules.petowner.value;
 
-import domainapp.modules.petowner.PetOwnerModule;
-
-import lombok.NonNull;
-
 import javax.inject.Named;
+
+import org.springframework.stereotype.Component;
 
 import org.apache.causeway.applib.services.bookmark.IdStringifier;
 import org.apache.causeway.applib.value.semantics.DefaultsProvider;
@@ -13,11 +11,12 @@ import org.apache.causeway.applib.value.semantics.Renderer;
 import org.apache.causeway.applib.value.semantics.ValueDecomposition;
 import org.apache.causeway.applib.value.semantics.ValueSemanticsAbstract;
 import org.apache.causeway.commons.internal.base._Strings;
-
 import org.apache.causeway.schema.common.v2.ValueType;
 import org.apache.causeway.schema.common.v2.ValueWithTypeDto;
 
-import org.springframework.stereotype.Component;
+import lombok.NonNull;
+
+import domainapp.modules.petowner.PetOwnerModule;
 
 @Named(PetOwnerModule.NAMESPACE + ".EmailAddressValueSemantics")
 @Component

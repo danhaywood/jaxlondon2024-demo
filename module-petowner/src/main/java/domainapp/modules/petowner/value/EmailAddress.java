@@ -1,13 +1,13 @@
 package domainapp.modules.petowner.value;
 
-import javax.persistence.Column;
-
-import lombok.Getter;
-
 import java.io.Serializable;
 import java.util.regex.Pattern;
 
+import javax.persistence.Column;
+
 import org.apache.causeway.commons.internal.base._Strings;
+
+import lombok.Getter;
 
 @javax.persistence.Embeddable
 @org.apache.causeway.applib.annotation.Value

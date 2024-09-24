@@ -2,33 +2,27 @@ package domainapp.modules.visit.fixture;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 import javax.inject.Inject;
 
-import org.apache.causeway.applib.services.wrapper.control.SyncControl;
-
 import org.apache.causeway.applib.services.clock.ClockService;
 import org.apache.causeway.applib.services.registry.ServiceRegistry;
+import org.apache.causeway.applib.services.wrapper.control.SyncControl;
 import org.apache.causeway.testing.fakedata.applib.services.FakeDataService;
 import org.apache.causeway.testing.fixtures.applib.personas.BuilderScriptWithResult;
 import org.apache.causeway.testing.fixtures.applib.personas.Persona;
 import org.apache.causeway.testing.fixtures.applib.setup.PersonaEnumPersistAll;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
 import domainapp.modules.petowner.fixture.PetOwner_persona;
 import domainapp.modules.visit.contributions.PetOwner_bookVisit;
 import domainapp.modules.visit.contributions.PetOwner_visits;
 import domainapp.modules.visit.dom.visit.Visit;
-
 import domainapp.modules.visit.dom.visit.VisitRepository;
-
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
-import lombok.val;
-import lombok.experimental.Accessors;
-
-import domainapp.modules.petowner.dom.petowner.PetOwner;
 
 /**
  * Returns the most recent Visit, or the one scheduled.

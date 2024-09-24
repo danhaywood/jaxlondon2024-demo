@@ -28,8 +28,6 @@ import org.apache.causeway.applib.annotation.Title;
 import org.apache.causeway.applib.jaxb.PersistentEntityAdapter;
 import org.apache.causeway.persistence.jpa.applib.integration.CausewayEntityListener;
 
-import domainapp.modules.petowner.types.Notes;
-
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,6 +36,7 @@ import lombok.ToString;
 
 import domainapp.modules.petowner.PetOwnerModule;
 import domainapp.modules.petowner.dom.petowner.PetOwner;
+import domainapp.modules.petowner.types.Notes;
 import domainapp.modules.petowner.types.PetName;
 
 @Entity

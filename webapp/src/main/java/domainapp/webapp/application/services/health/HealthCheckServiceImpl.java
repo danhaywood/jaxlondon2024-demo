@@ -1,8 +1,5 @@
 package domainapp.webapp.application.services.health;
 
-import domainapp.modules.petowner.dom.petowner.PetOwners;
-import domainapp.webapp.application.ApplicationModule;
-
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -10,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import org.apache.causeway.applib.services.health.Health;
 import org.apache.causeway.applib.services.health.HealthCheckService;
+
+import domainapp.modules.petowner.dom.petowner.PetOwners;
+import domainapp.webapp.application.ApplicationModule;
 
 @Service
 @Named(ApplicationModule.NAMESPACE + ".HealthCheckServiceImpl")

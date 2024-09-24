@@ -8,7 +8,6 @@ import java.lang.annotation.Target;
 import org.apache.causeway.applib.annotation.Editing;
 import org.apache.causeway.applib.annotation.Optionality;
 import org.apache.causeway.applib.annotation.Parameter;
-import org.apache.causeway.applib.annotation.ParameterLayout;
 import org.apache.causeway.applib.annotation.Property;
 
 @Property(

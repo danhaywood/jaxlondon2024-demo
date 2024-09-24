@@ -20,7 +20,6 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.SneakyThrows;
-import lombok.val;
 import lombok.experimental.Accessors;
 
 import domainapp.modules.petowner.dom.pet.PetSpecies;
@@ -65,11 +64,11 @@ implements Persona<PetOwner, PetOwner_persona.Builder> {
         @Override
         protected PetOwner buildResult(final ExecutionContext ec) {
 
-            val petOwner = petOwners.create(persona.name, null, null, null);
+            final var petOwner = petOwners.create(persona.name, null, null, null);
 
             if (persona.contentFileName != null) {
-                val bytes = toBytes(persona.contentFileName);
-                val attachment = new Blob(persona.contentFileName, "application/pdf", bytes);
+                final var bytes = toBytes(persona.contentFileName);
+                final var attachment = new Blob(persona.contentFileName, "application/pdf", bytes);
                 petOwner.updateAttachment(attachment);
             }
             if (persona.knownAs != null) {

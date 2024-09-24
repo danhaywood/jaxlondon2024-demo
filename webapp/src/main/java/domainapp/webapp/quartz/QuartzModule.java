@@ -9,8 +9,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.JobDetailFactoryBean;
 import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 
-import lombok.val;
-
 import domainapp.webapp.quartz.job.SampleJob;
 
 @Configuration
@@ -23,7 +21,7 @@ public class QuartzModule {
 
     @Bean
     public JobDetailFactoryBean jobDetail() {
-        val jobDetailFactory = new JobDetailFactoryBean();
+        final var jobDetailFactory = new JobDetailFactoryBean();
         jobDetailFactory.setJobClass(SampleJob.class);
         jobDetailFactory.setDescription("Invoke Sample Job service...");
         jobDetailFactory.setDurability(true);
@@ -32,7 +30,7 @@ public class QuartzModule {
 
     @Bean
     public SimpleTriggerFactoryBean trigger(JobDetail job) {
-        val trigger = new SimpleTriggerFactoryBean();
+        final var trigger = new SimpleTriggerFactoryBean();
         trigger.setJobDetail(job);
         trigger.setStartDelay(START_DELAY_SECS * MILLIS_PER_SEC);
         trigger.setRepeatInterval(REPEAT_INTERVAL_SECS * MILLIS_PER_SEC);

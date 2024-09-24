@@ -20,6 +20,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <causeway.version>2.1.0</causeway.version>
 
         <datasource-proxy-spring-boot-starter.version>1.8.1</datasource-proxy-spring-boot-starter.version>
         <maven-timeline.version>1.8</maven-timeline.version>
@@ -85,32 +86,20 @@
 
     <profiles>
         <profile>
-            <id>staging</id>
+            <id>v2</id>
             <activation>
-                <property>
-                    <name>!skip.staging</name>
-                </property>
+                <file>
+                    <missing>v3.marker</missing>
+                </file>
             </activation>
-            <repositories>
-                <repository>
-                    <id>staging</id>
-                    <url>https://repository.apache.org/content/groups/staging/</url>
-                </repository>
-            </repositories>
         </profile>
         <profile>
-            <id>nightly</id>
+            <id>v3</id>
             <activation>
-                <property>
-                    <name>!skip.nightly</name>
-                </property>
+                <file>
+                    <exists>v3.marker</exists>
+                </file>
             </activation>
-            <repositories>
-                <repository>
-                    <id>nightly-builds</id>
-                    <url>https://raw.githubusercontent.com/apache-causeway-committers/causeway-nightly/master/mvn-snapshots</url>
-                </repository>
-            </repositories>
         </profile>
     </profiles>
 </project>

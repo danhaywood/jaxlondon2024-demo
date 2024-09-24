@@ -97,4 +97,23 @@
 
     </dependencies>
 
+    <profiles>
+        <profile>
+            <id>v2</id>
+            <activation>
+                <file>
+                    <missing>v3.marker</missing>
+                </file>
+            </activation>
+        </profile>
+        <profile>
+            <id>v3</id>
+            <activation>
+                <file>
+                    <exists>v3.marker</exists>
+                </file>
+            </activation>
+        </profile>
+    </profiles>
+
 </project>

@@ -104,16 +104,14 @@ causeway:
         fallback:
           username: sven
           roles:
-            - simple-superuser
-            - foo
-            - bar
+            - petclinic-superuser
 
   testing:
     fixtures:
       fixture-scripts-specification:
-        context-class: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
-        run-script-default: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
-        recreate: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
+        context-class: petclinicapp.webapp.application.fixture.scenarios.PetclinicAppDemo
+        run-script-default: petclinicapp.webapp.application.fixture.scenarios.PetclinicAppDemo
+        recreate: petclinicapp.webapp.application.fixture.scenarios.PetclinicAppDemo
         non-persisted-objects-strategy: persist
         multiple-execution-strategy: execute
   value-types:

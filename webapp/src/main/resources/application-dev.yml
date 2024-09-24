@@ -1,7 +1,7 @@
 causeway:
   testing:
     fixtures:
-      initial-script: domainapp.webapp.application.fixture.scenarios.DomainAppDemo
+      initial-script: petclinicapp.webapp.application.fixture.scenarios.PetclinicAppDemo
 
   viewer:
     wicket:

@@ -23,6 +23,8 @@ import domainapp.modules.visit.contributions.PetOwner_bookVisit;
 import domainapp.modules.visit.dom.visit.Visit;
 import domainapp.modules.visit.dom.visit.VisitRepository;
 
+import lombok.val;
+
 public class PetOwner_bookVisit_IntegTest extends VisitModuleIntegTestAbstract {
 
     @BeforeEach
@@ -34,26 +36,29 @@ public class PetOwner_bookVisit_IntegTest extends VisitModuleIntegTestAbstract {
     public void happy_case() {
 
         // given
-        PetOwner somePetOwner = fakeDataService.enums()
+        val somePetOwner = fakeDataService.enums()
                 .anyOf(PetOwner_persona.class)
                 .findUsing(serviceRegistry);
-        Pet somePet = fakeDataService.collections()
+        val somePet = fakeDataService.collections()
                 .anyOf(somePetOwner.getPets());
 
-        List<Visit> before = visitRepository.findByPetOwner(somePetOwner);
+        val before = visitRepository.findByPetOwner(somePetOwner);
         assertThat(before).isEmpty();
 
         // when
-        LocalDateTime visitAt = clockService.getClock().nowAsLocalDateTime()
+        var visitAt = clockService.getClock().nowAsLocalDateTime()
                 .plusDays(fakeDataService.ints().between(1, 3));
+        if(visitAt.getHour() < 9) {
+            visitAt = visitAt.plusHours(9 - visitAt.getHour());
+        }
 
         wrapMixin(PetOwner_bookVisit.class, somePetOwner).act(somePet, visitAt);
 
         // then
-        List<Visit> after = visitRepository.findByPetOwner(somePetOwner);
+        val after = visitRepository.findByPetOwner(somePetOwner);
         assertThat(after).hasSize(1);
 
-        Visit visit = after.get(0);
+        val visit = after.get(0);
 
         assertThat(visit.getPet()).isSameAs(somePet);
         assertThat(visit.getPet().getPetOwner()).isSameAs(somePetOwner);
@@ -64,14 +69,14 @@ public class PetOwner_bookVisit_IntegTest extends VisitModuleIntegTestAbstract {
     public void cannot_book_in_the_past() {
 
         // given
-        PetOwner somePetOwner = fakeDataService.enums()
+        val somePetOwner = fakeDataService.enums()
                 .anyOf(PetOwner_persona.class)
                 .findUsing(serviceRegistry);
-        Pet somePet = fakeDataService.collections()
+        val somePet = fakeDataService.collections()
                 .anyOf(somePetOwner.getPets());
 
         // when, then
-        LocalDateTime visitAt = clockService.getClock().nowAsLocalDateTime();
+        val visitAt = clockService.getClock().nowAsLocalDateTime();
 
         assertThatThrownBy(() ->
                 wrapMixin(PetOwner_bookVisit.class, somePetOwner).act(somePet, visitAt)

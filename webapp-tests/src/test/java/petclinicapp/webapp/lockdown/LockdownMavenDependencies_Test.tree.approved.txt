@@ -1,0 +1,319 @@
+org.apache.causeway.starters:petclinicapp-jpa-webapp-tests:jar:2.1.0-SNAPSHOT
++- org.apache.causeway.starters:petclinicapp-jpa-webapp:jar:2.1.0-SNAPSHOT:test
+|  +- org.apache.causeway.starters:petclinicapp-jpa-module-visit:jar:2.1.0-SNAPSHOT:test
+|  |  +- org.apache.causeway.starters:petclinicapp-jpa-module-petowner:jar:2.1.0-SNAPSHOT:test
+|  |  +- org.apache.causeway.extensions:causeway-extensions-fullcalendar-applib:jar:2.1.0:compile
+|  |  +- org.apache.causeway.extensions:causeway-extensions-pdfjs-applib:jar:2.1.0:compile
+|  |  \- org.apache.causeway.persistence:causeway-persistence-jpa-applib:jar:2.1.0:compile
+|  |     \- org.springframework.data:spring-data-jpa:jar:2.7.18:compile
+|  |        +- org.springframework.data:spring-data-commons:jar:2.7.18:compile
+|  |        \- org.springframework:spring-orm:jar:5.3.31:compile
+|  +- org.apache.causeway.mavendeps:causeway-mavendeps-webapp:pom:2.1.0:compile
+|  |  +- org.springframework.boot:spring-boot-starter-web:jar:2.7.18:compile
+|  |  |  +- org.springframework.boot:spring-boot-starter-json:jar:2.7.18:compile
+|  |  |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.18:compile
+|  |  |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.83:compile
+|  |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.83:compile
+|  |  |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.83:compile
+|  |  |  \- org.springframework:spring-webmvc:jar:5.3.31:compile
+|  |  +- org.apache.causeway.core:causeway-schema:jar:2.1.0:compile
+|  |  +- org.apache.causeway.core:causeway-core-security:jar:2.1.0:compile
+|  |  \- org.apache.causeway.viewer:causeway-viewer-restfulobjects-viewer:jar:2.1.0:compile
+|  |     \- org.apache.causeway.viewer:causeway-viewer-commons-services:jar:2.1.0:compile
+|  +- org.apache.causeway.viewer:causeway-viewer-wicket-viewer:jar:2.1.0:compile
+|  |  +- org.apache.causeway.viewer:causeway-viewer-wicket-ui:jar:2.1.0:compile
+|  |  |  +- org.apache.causeway.viewer:causeway-viewer-wicket-model:jar:2.1.0:compile
+|  |  |  +- org.apache.causeway.viewer:causeway-viewer-commons-prism:jar:2.1.0:compile
+|  |  |  |  \- org.webjars.bowergithub.prismjs:prism:jar:1.29.0:compile
+|  |  |  +- org.apache.wicket:wicket-devutils:jar:9.18.0:compile
+|  |  |  +- org.apache.wicket:wicket-extensions:jar:9.18.0:compile
+|  |  |  +- org.ow2.asm:asm-util:jar:9.7:compile
+|  |  |  +- org.wicketstuff:wicketstuff-select2:jar:9.18.0:compile
+|  |  |  +- org.webjars:select2:jar:4.0.13:compile
+|  |  |  +- org.webjars:datatables:jar:1.13.5:compile
+|  |  |  +- org.webjars:jquery:jar:3.7.1:compile
+|  |  |  +- org.webjars:jquery-ui:jar:1.13.3:compile
+|  |  |  +- de.agilecoders.wicket.webjars:wicket-webjars:jar:3.0.7:compile
+|  |  |  +- org.webjars.npm:summernote:jar:0.8.20:compile
+|  |  |  +- org.webjars:momentjs:jar:2.29.4:compile
+|  |  |  +- de.agilecoders.wicket:wicket-bootstrap-themes:jar:6.0.5:compile
+|  |  |  |  +- org.webjars:bootstrap-italia:jar:1.6.2:compile
+|  |  |  |  \- org.webjars:splide:jar:3.6.12:compile
+|  |  |  \- com.google.guava:guava:jar:33.2.1-jre:compile
+|  |  |     +- com.google.guava:failureaccess:jar:1.0.2:compile
+|  |  |     +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+|  |  |     +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+|  |  |     +- org.checkerframework:checker-qual:jar:3.42.0:compile
+|  |  |     +- com.google.errorprone:error_prone_annotations:jar:2.28.0:compile
+|  |  |     \- com.google.j2objc:j2objc-annotations:jar:3.0.0:compile
+|  |  +- org.apache.wicket:wicket-spring:jar:9.18.0:compile
+|  |  |  +- org.apache.wicket:wicket-core:jar:9.18.0:compile
+|  |  |  |  +- com.github.openjson:openjson:jar:1.0.13:compile
+|  |  |  |  +- org.apache.wicket:wicket-request:jar:9.18.0:compile
+|  |  |  |  +- org.apache.wicket:wicket-util:jar:9.18.0:compile
+|  |  |  |  |  \- commons-fileupload:commons-fileupload:jar:1.5:compile
+|  |  |  |  \- org.danekja:jdk-serializable-functional:jar:1.9.0:compile
+|  |  |  \- org.apache.wicket:wicket-ioc:jar:9.18.0:compile
+|  |  |     \- javax.inject:javax.inject:jar:1:compile
+|  |  +- org.apache.wicket:wicket-auth-roles:jar:9.18.0:compile
+|  |  +- de.agilecoders.wicket:wicket-bootstrap-core:jar:6.0.5:compile
+|  |  |  +- de.agilecoders.wicket:jquery-selectors:jar:3.0.6:compile
+|  |  |  +- org.webjars:bootstrap:jar:5.3.2:compile
+|  |  |  +- org.webjars.npm:popperjs__core:jar:2.11.8:compile
+|  |  |  \- org.webjars:modernizr:jar:2.8.3-1:compile
+|  |  +- org.springframework:spring-web:jar:5.3.31:compile
+|  |  |  \- org.springframework:spring-beans:jar:5.3.31:compile
+|  |  +- commons-io:commons-io:jar:2.16.1:compile
+|  |  \- de.agilecoders.wicket:wicket-bootstrap-extensions:jar:6.0.5:compile
+|  |     +- org.webjars:tempusdominus-bootstrap-4:jar:5.39.0:compile
+|  |     +- org.webjars.npm:eonasdan__tempus-dominus:jar:6.7.11:compile
+|  |     +- org.webjars.npm:bootstrap-select:jar:1.14.0-beta3:compile
+|  |     +- org.webjars.npm:inputmask:jar:5.0.6:compile
+|  |     \- org.webjars:animate.css:jar:3.7.2:compile
+|  +- org.apache.causeway.viewer:causeway-viewer-restfulobjects-jaxrsresteasy:jar:2.1.0:compile
+|  |  +- org.apache.causeway.viewer:causeway-viewer-restfulobjects-rendering:jar:2.1.0:compile
+|  |  |  \- org.apache.causeway.viewer:causeway-viewer-restfulobjects-applib:jar:2.1.0:compile
+|  |  +- org.jboss.resteasy:resteasy-spring-boot-starter:jar:5.0.0.Final:compile
+|  |  |  +- org.jboss.resteasy:resteasy-core:jar:5.0.0.Final:compile
+|  |  |  |  +- org.reactivestreams:reactive-streams:jar:1.0.4:compile
+|  |  |  |  \- com.ibm.async:asyncutil:jar:0.1.0:compile
+|  |  |  +- org.jboss.resteasy:resteasy-core-spi:jar:5.0.0.Final:compile
+|  |  |  +- org.jboss.resteasy:resteasy-servlet-initializer:jar:5.0.0.Final:compile
+|  |  |  +- org.jboss.resteasy.spring:resteasy-spring:jar:2.0.0.Final:compile
+|  |  |  |  \- org.jboss.resteasy:resteasy-client:jar:5.0.0.Final:compile
+|  |  |  |     +- org.jboss.resteasy:resteasy-client-api:jar:5.0.0.Final:compile
+|  |  |  |     \- org.apache.httpcomponents:httpclient:jar:4.5.14:compile
+|  |  |  |        \- org.apache.httpcomponents:httpcore:jar:4.4.16:compile
+|  |  |  +- org.jboss.resteasy:resteasy-jackson2-provider:jar:5.0.0.Final:compile
+|  |  |  |  \- com.github.java-json-tools:json-patch:jar:1.13:compile
+|  |  |  |     +- com.github.java-json-tools:msg-simple:jar:1.2:compile
+|  |  |  |     |  \- com.github.java-json-tools:btf:jar:1.3:compile
+|  |  |  |     \- com.github.java-json-tools:jackson-coreutils:jar:2.0:compile
+|  |  |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
+|  |  |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+|  |  |  +- org.glassfish:javax.json:jar:1.1.2:compile
+|  |  |  |  \- javax.json:javax.json-api:jar:1.1.4:compile
+|  |  |  +- org.objenesis:objenesis:jar:3.2:compile
+|  |  |  +- com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:jar:2.13.5:compile
+|  |  |  |  \- com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:jar:2.13.5:compile
+|  |  |  +- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.5:compile
+|  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.13.5:compile
+|  |  |  +- commons-codec:commons-codec:jar:1.15:compile
+|  |  |  \- org.junit.platform:junit-platform-commons:jar:1.10.3:compile
+|  |  |     \- org.apiguardian:apiguardian-api:jar:1.1.2:compile
+|  |  \- org.jboss.resteasy:resteasy-jaxb-provider:jar:5.0.0.Final:compile
+|  +- org.apache.causeway.persistence:causeway-persistence-jpa-eclipselink:jar:2.1.0:compile
+|  |  +- org.apache.causeway.persistence:causeway-persistence-jpa-integration:jar:2.1.0:compile
+|  |  |  +- org.apache.causeway.persistence:causeway-persistence-commons:jar:2.1.0:compile
+|  |  |  \- org.apache.causeway.persistence:causeway-persistence-jpa-metamodel:jar:2.1.0:compile
+|  |  +- org.eclipse.persistence:org.eclipse.persistence.jpa:jar:2.7.15:compile
+|  |  |  +- org.eclipse.persistence:jakarta.persistence:jar:2.2.3:compile
+|  |  |  +- org.eclipse.persistence:org.eclipse.persistence.asm:jar:9.7.0:compile
+|  |  |  +- org.eclipse.persistence:org.eclipse.persistence.antlr:jar:2.7.15:compile
+|  |  |  +- org.eclipse.persistence:org.eclipse.persistence.jpa.jpql:jar:2.7.15:compile
+|  |  |  \- org.eclipse.persistence:org.eclipse.persistence.core:jar:2.7.15:compile
+|  |  +- jakarta.el:jakarta.el-api:jar:3.0.3:compile
+|  |  \- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.7.18:compile
+|  |     +- org.springframework.boot:spring-boot-starter-aop:jar:2.7.18:compile
+|  |     |  \- org.aspectj:aspectjweaver:jar:1.9.7:compile
+|  |     +- org.springframework.boot:spring-boot-starter-jdbc:jar:2.7.18:compile
+|  |     |  \- com.zaxxer:HikariCP:jar:4.0.3:compile
+|  |     \- org.springframework:spring-aspects:jar:5.3.31:compile
+|  +- org.apache.causeway.viewer:causeway-viewer-wicket-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.testing:causeway-testing-h2console-ui:jar:2.1.0:compile
+|  |  \- org.apache.causeway.core:causeway-core-webapp:jar:2.1.0:compile
+|  |     +- org.apache.causeway.core:causeway-core-transaction:jar:2.1.0:compile
+|  |     \- org.apache.causeway.core:causeway-core-interaction:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-flyway-impl:jar:2.1.0:compile
+|  |  +- org.apache.causeway.core:causeway-core-config:jar:2.1.0:compile
+|  |  |  \- org.hibernate.validator:hibernate-validator:jar:6.2.5.Final:compile
+|  |  |     +- org.jboss.logging:jboss-logging:jar:3.4.3.Final:compile
+|  |  |     \- com.fasterxml:classmate:jar:1.5.1:compile
+|  |  +- org.flywaydb:flyway-core:jar:8.5.13:compile
+|  |  +- org.springframework:spring-context:jar:5.3.31:compile
+|  |  |  +- org.springframework:spring-aop:jar:5.3.31:compile
+|  |  |  \- org.springframework:spring-expression:jar:5.3.31:compile
+|  |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.7.18:compile
+|  |  \- org.springframework:spring-jdbc:jar:5.3.31:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-layoutloaders-github:jar:2.1.0:compile
+|  |  +- org.apache.causeway.core:causeway-core-metamodel:jar:2.1.0:compile
+|  |  |  \- io.swagger.core.v3:swagger-core:jar:2.2.22:compile
+|  |  |     +- io.swagger.core.v3:swagger-annotations:jar:2.2.22:compile
+|  |  |     \- io.swagger.core.v3:swagger-models:jar:2.2.22:compile
+|  |  +- org.apache.causeway.valuetypes:causeway-valuetypes-asciidoc-applib:jar:2.1.0:compile
+|  |  |  \- org.asciidoctor:asciidoctorj-api:jar:2.5.13:compile
+|  |  \- org.apache.causeway.valuetypes:causeway-valuetypes-asciidoc-builder:jar:2.1.0:compile
+|  +- org.apache.causeway.valuetypes:causeway-valuetypes-asciidoc-metamodel:jar:2.1.0:compile
+|  +- org.apache.causeway.valuetypes:causeway-valuetypes-asciidoc-ui-wkt:jar:2.1.0:compile
+|  |  +- org.asciidoctor:asciidoctorj:jar:2.5.13:compile
+|  |  |  +- org.jruby:jruby:jar:9.4.7.0:compile
+|  |  |  |  +- org.jruby:jruby-base:jar:9.4.7.0:compile
+|  |  |  |  |  +- com.github.jnr:jnr-netdb:jar:1.2.0:compile
+|  |  |  |  |  +- com.github.jnr:jnr-unixsocket:jar:0.38.22:compile
+|  |  |  |  |  +- org.jruby.joni:joni:jar:2.2.1:compile
+|  |  |  |  |  +- org.jruby.jcodings:jcodings:jar:1.0.58:compile
+|  |  |  |  |  +- org.jruby:dirgra:jar:0.3:compile
+|  |  |  |  |  +- com.headius:invokebinder:jar:1.13:compile
+|  |  |  |  |  +- com.headius:options:jar:1.6:compile
+|  |  |  |  |  +- org.jruby:jzlib:jar:1.1.5:compile
+|  |  |  |  |  +- me.qmx.jitescript:jitescript:jar:0.4.1:compile
+|  |  |  |  |  \- com.headius:backport9:jar:1.13:compile
+|  |  |  |  \- org.jruby:jruby-stdlib:jar:9.4.7.0:compile
+|  |  |  \- com.beust:jcommander:jar:1.82:runtime
+|  |  +- com.github.jnr:jnr-posix:jar:3.1.19:compile
+|  |  +- com.github.jnr:jnr-enxio:jar:0.32.17:compile
+|  |  +- com.github.jnr:jnr-constants:jar:0.10.4:compile
+|  |  \- com.github.jnr:jnr-ffi:jar:2.2.16:compile
+|  |     +- com.github.jnr:jffi:jar:1.3.13:compile
+|  |     +- com.github.jnr:jffi:jar:native:1.3.13:runtime
+|  |     +- org.ow2.asm:asm:jar:9.7:compile
+|  |     +- org.ow2.asm:asm-commons:jar:9.2:compile
+|  |     +- org.ow2.asm:asm-analysis:jar:9.7:compile
+|  |     +- org.ow2.asm:asm-tree:jar:9.7:compile
+|  |     +- com.github.jnr:jnr-a64asm:jar:1.0.0:compile
+|  |     \- com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-tabular-excel:jar:2.1.0:compile
+|  |  +- org.apache.causeway.extensions:causeway-extensions-tabular-applib:jar:2.1.0:compile
+|  |  +- org.apache.causeway.viewer:causeway-viewer-commons-applib:jar:2.1.0:compile
+|  |  +- org.apache.poi:poi-ooxml:jar:5.2.5:compile
+|  |  |  +- org.apache.poi:poi:jar:5.2.5:compile
+|  |  |  |  +- org.apache.commons:commons-math3:jar:3.6.1:compile
+|  |  |  |  \- com.zaxxer:SparseBitSet:jar:1.3:compile
+|  |  |  +- org.apache.xmlbeans:xmlbeans:jar:5.2.0:compile
+|  |  |  +- org.apache.commons:commons-compress:jar:1.25.0:compile
+|  |  |  +- com.github.virtuald:curvesapi:jar:1.08:compile
+|  |  |  \- org.apache.commons:commons-collections4:jar:4.4:compile
+|  |  \- org.apache.poi:poi-ooxml-lite:jar:5.2.5:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-fullcalendar-wicket-ui:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-fullcalendar-wicket-integration:jar:2.1.0:compile
+|  |     \- org.webjars:fullcalendar:jar:5.11.3:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-pdfjs-wicket-ui:jar:2.1.0:compile
+|  |  +- org.apache.causeway.extensions:causeway-extensions-pdfjs-metamodel:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-pdfjs-wicket-integration:jar:2.1.0:compile
+|  |     \- org.webjars.npm:pdfjs-dist:jar:4.3.136:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-secman-encryption-spring:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-secman-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-secman-integration:jar:2.1.0:compile
+|  |     \- org.apache.causeway.extensions:causeway-extensions-secman-applib:jar:2.1.0:compile
+|  |        \- org.springframework.security:spring-security-crypto:jar:5.7.11:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-sessionlog-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-sessionlog-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-audittrail-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-audittrail-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-commandlog-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-commandlog-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-executionlog-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-executionlog-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.extensions:causeway-extensions-executionoutbox-persistence-jpa:jar:2.1.0:compile
+|  |  \- org.apache.causeway.extensions:causeway-extensions-executionoutbox-applib:jar:2.1.0:compile
+|  +- org.apache.causeway.viewer:causeway-viewer-graphql-viewer:jar:2.1.0:compile
+|  |  +- org.springframework.boot:spring-boot:jar:2.7.18:compile
+|  |  +- org.apache.causeway.viewer:causeway-viewer-graphql-model:jar:2.1.0:compile
+|  |  |  +- org.apache.causeway.viewer:causeway-viewer-commons-model:jar:2.1.0:compile
+|  |  |  |  \- org.webjars:font-awesome:jar:6.5.2:compile
+|  |  |  +- org.apache.causeway.viewer:causeway-viewer-graphql-applib:jar:2.1.0:compile
+|  |  |  +- org.springframework.graphql:spring-graphql:jar:1.0.6:compile
+|  |  |  |  \- io.projectreactor:reactor-core:jar:3.4.34:compile
+|  |  |  +- com.graphql-java:graphql-java:jar:18.5:compile
+|  |  |  |  +- com.graphql-java:java-dataloader:jar:3.1.2:compile
+|  |  |  |  \- org.antlr:antlr4-runtime:jar:4.9.3:runtime
+|  |  |  \- com.graphql-java:graphql-java-extended-scalars:jar:22.0:compile
+|  |  \- org.springframework.boot:spring-boot-starter-websocket:jar:2.7.18:compile
+|  |     +- org.springframework:spring-messaging:jar:5.3.31:compile
+|  |     \- org.springframework:spring-websocket:jar:5.3.31:compile
+|  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.7.18:test
+|  |  +- org.springframework.boot:spring-boot-actuator:jar:2.7.18:compile
+|  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.13.5:compile
+|  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.13.5:compile
+|  |  \- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.5:compile
+|  +- org.springframework.boot:spring-boot-starter-quartz:jar:2.7.18:test
+|  |  +- org.springframework:spring-context-support:jar:5.3.31:compile
+|  |  +- org.springframework:spring-tx:jar:5.3.31:compile
+|  |  \- org.quartz-scheduler:quartz:jar:2.3.2:compile
+|  |     \- com.mchange:mchange-commons-java:jar:0.2.15:compile
+|  +- org.springframework.boot:spring-boot-starter:jar:2.7.18:compile
+|  |  +- jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile
+|  |  +- org.springframework:spring-core:jar:5.3.31:compile
+|  |  |  \- org.springframework:spring-jcl:jar:5.3.31:compile
+|  |  \- org.yaml:snakeyaml:jar:1.30:compile
+|  +- org.springframework.boot:spring-boot-starter-log4j2:jar:2.7.18:compile
+|  |  +- org.apache.logging.log4j:log4j-slf4j-impl:jar:2.17.2:compile
+|  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.17.2:compile
+|  |  +- org.apache.logging.log4j:log4j-core:jar:2.17.2:compile
+|  |  +- org.apache.logging.log4j:log4j-jul:jar:2.17.2:compile
+|  |  \- org.slf4j:jul-to-slf4j:jar:1.7.36:compile
+|  +- org.springframework:spring-instrument:jar:5.3.31:test
+|  +- com.github.gavlyukovskiy:datasource-proxy-spring-boot-starter:jar:1.8.1:test
+|  |  +- com.github.gavlyukovskiy:datasource-decorator-spring-boot-autoconfigure:jar:1.8.1:test
+|  |  \- net.ttddyy:datasource-proxy:jar:1.7:test
+|  \- com.github.vertical-blank:sql-formatter:jar:2.0.4:test
++- org.apache.causeway.testing:causeway-testing-integtestsupport-applib:jar:2.1.0:test
+|  +- org.springframework.boot:spring-boot-starter-test:jar:2.7.18:test
+|  |  +- org.springframework.boot:spring-boot-test:jar:2.7.18:test
+|  |  +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.18:test
+|  |  +- com.jayway.jsonpath:json-path:jar:2.7.0:test
+|  |  |  \- net.minidev:json-smart:jar:2.4.11:test
+|  |  |     \- net.minidev:accessors-smart:jar:2.4.11:test
+|  |  +- jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:compile
+|  |  |  \- jakarta.activation:jakarta.activation-api:jar:1.2.2:compile
+|  |  +- org.assertj:assertj-core:jar:3.22.0:test
+|  |  +- org.hamcrest:hamcrest:jar:2.2:test
+|  |  +- org.junit.jupiter:junit-jupiter:jar:5.10.3:test
+|  |  |  +- org.junit.jupiter:junit-jupiter-api:jar:5.10.3:test
+|  |  |  |  \- org.opentest4j:opentest4j:jar:1.3.0:test
+|  |  |  +- org.junit.jupiter:junit-jupiter-params:jar:5.10.3:test
+|  |  |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.10.3:test
+|  |  |     \- org.junit.platform:junit-platform-engine:jar:1.10.3:test
+|  |  +- org.mockito:mockito-core:jar:4.5.1:test
+|  |  |  +- net.bytebuddy:byte-buddy:jar:1.12.23:compile
+|  |  |  \- net.bytebuddy:byte-buddy-agent:jar:1.12.23:test
+|  |  +- org.mockito:mockito-junit-jupiter:jar:4.5.1:test
+|  |  +- org.skyscreamer:jsonassert:jar:1.5.1:test
+|  |  |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+|  |  \- org.xmlunit:xmlunit-core:jar:2.9.1:test
+|  +- org.springframework:spring-test:jar:5.3.31:test
+|  +- com.approvaltests:approvaltests:jar:24.2.0:test
+|  |  \- com.approvaltests:approvaltests-util:jar:24.2.0:test
+|  +- org.hamcrest:hamcrest-library:jar:2.2:test
+|  |  \- org.hamcrest:hamcrest-core:jar:2.2:test
+|  +- org.slf4j:slf4j-api:jar:1.7.36:compile
+|  +- org.apache.causeway.security:causeway-security-bypass:jar:2.1.0:compile
+|  +- org.apache.causeway.core:causeway-core-runtimeservices:jar:2.1.0:compile
+|  |  +- jakarta.mail:jakarta.mail-api:jar:1.6.7:compile
+|  |  +- com.sun.mail:jakarta.mail:jar:1.6.7:compile
+|  |  |  \- com.sun.activation:jakarta.activation:jar:1.2.2:compile
+|  |  +- org.apache.causeway.core:causeway-core-runtime:jar:2.1.0:compile
+|  |  |  \- org.apache.causeway.valuetypes:causeway-valuetypes-jodatime-integration:jar:2.1.0:compile
+|  |  |     \- org.apache.causeway.valuetypes:causeway-valuetypes-jodatime-applib:jar:2.1.0:compile
+|  |  \- org.apache.causeway.core:causeway-core-codegen-bytebuddy:jar:2.1.0:compile
+|  +- org.hsqldb:hsqldb:jar:2.5.2:test
+|  \- com.h2database:h2:jar:2.1.214:compile
++- org.apache.causeway.testing:causeway-testing-fakedata-applib:jar:2.1.0:test
+|  +- org.apache.causeway.core:causeway-applib:jar:2.1.0:compile
+|  |  +- jakarta.validation:jakarta.validation-api:jar:2.0.2:compile
+|  |  \- jakarta.persistence:jakarta.persistence-api:jar:2.2.3:compile
+|  +- org.apache.causeway.commons:causeway-commons:jar:2.1.0:compile
+|  |  +- com.fasterxml.woodstox:woodstox-core:jar:7.0.0:compile
+|  |  +- org.codehaus.woodstox:stax2-api:jar:4.2.2:compile
+|  |  +- org.eclipse.persistence:org.eclipse.persistence.moxy:jar:2.7.15:compile
+|  |  +- org.eclipse.persistence:org.eclipse.persistence.sdo:jar:2.7.15:compile
+|  |  |  \- org.eclipse.persistence:commonj.sdo:jar:2.1.1:compile
+|  |  +- jakarta.inject:jakarta.inject-api:jar:1.0.5:compile
+|  |  +- jakarta.enterprise:jakarta.enterprise.cdi-api:jar:2.0.2:compile
+|  |  |  \- jakarta.interceptor:jakarta.interceptor-api:jar:1.2.5:compile
+|  |  |     \- jakarta.ejb:jakarta.ejb-api:jar:3.2.6:compile
+|  |  +- jakarta.transaction:jakarta.transaction-api:jar:1.3.3:compile
+|  |  +- org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:jar:2.0.2.Final:compile
+|  |  +- com.sun.xml.bind:jaxb-impl:jar:2.3.9:compile
+|  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.13.5:compile
+|  |  +- com.fasterxml.jackson.module:jackson-module-jaxb-annotations:jar:2.13.5:compile
+|  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.5:compile
+|  |  +- org.jsoup:jsoup:jar:1.17.2:compile
+|  |  \- org.jdom:jdom2:jar:2.0.6.1:compile
+|  \- com.github.javafaker:javafaker:jar:1.0.2:test
+|     +- org.apache.commons:commons-lang3:jar:3.12.0:compile
+|     \- com.github.mifmif:generex:jar:1.0.2:test
+|        \- dk.brics.automaton:automaton:jar:1.11-8:test
++- org.apache.causeway.testing:causeway-testing-fixtures-applib:jar:2.1.0:test
+|  \- joda-time:joda-time:jar:2.12.7:compile
+\- org.projectlombok:lombok:jar:1.18.30:provided

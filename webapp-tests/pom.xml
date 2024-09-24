@@ -32,6 +32,18 @@
         </testResources>
     </build>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.causeway.testing</groupId>
+                <artifactId>causeway-testing</artifactId>
+                <scope>import</scope>
+                <type>pom</type>
+                <version>${causeway.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
 
         <dependency>
@@ -60,6 +72,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.causeway.testing</groupId>
+            <artifactId>causeway-testing-archtestsupport-applib</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <profiles>
@@ -78,6 +96,49 @@
                     <exists>v3.marker</exists>
                 </file>
             </activation>
+        </profile>
+
+        <profile>
+            <id>lockdown</id>
+            <activation>
+                <property>
+                    <name>lockdown</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>list</id>
+                                <phase>generate-test-resources</phase>
+                                <goals>
+                                    <goal>list</goal>
+                                </goals>
+                                <configuration>
+                                    <outputFile>
+                                        ${project.build.directory}/test-classes/petclinicapp/webapp/lockdown/LockDownMavenDependencies_Test.list.actual.txt
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>tree</id>
+                                <phase>generate-test-resources</phase>
+                                <goals>
+                                    <goal>tree</goal>
+                                </goals>
+                                <configuration>
+                                    <outputFile>
+                                        ${project.build.directory}/test-classes/petclinicapp/webapp/lockdown/LockDownMavenDependencies_Test.tree.actual.txt
+                                    </outputFile>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 

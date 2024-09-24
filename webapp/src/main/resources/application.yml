@@ -52,12 +52,12 @@ causeway:
   viewer:
     common:
       application:
-        about: Simple App
+        about: PetClinic App
         brand-logo-signin: images/apache-causeway/logo-banner-591x120.png
         brand-logo-header: images/apache-causeway/logo-65x48.png
         favicon-url: images/favicon.png
         menubars-layout-file: menubars.layout.xml
-        name: Simple App
+        name: PetClinic App
         # https://stackoverflow.com/a/38983935/56880
         version: ^project.version^
       credit:

@@ -10,10 +10,14 @@ create_marker() {
     echo "marker file to activate v3 Maven profile" > "$markerFile"
 }
 
+
+mvn rewrite:run
+
+mvn versions:update-parent -DparentVersion=3.1.0 -DgenerateBackupPoms=false
+mvn versions:set -DnewVersion=3.1.0-SNAPSHOT -DgenerateBackupPoms=false
+
 for pomFile in $(find . -name pom.xml -print); do
   create_marker "$pomFile"
 done
 
-mvn versions:update-parent -DparentVersion=3.1.0 -DgenerateBackupPoms=false
-mvn versions:set -DnewVersion=3.1.0-SNAPSHOT -DgenerateBackupPoms=false
-mvn rewrite:run
+mvnd install -DskipTests

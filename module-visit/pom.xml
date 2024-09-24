@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>simpleapp-jpa</artifactId>
+        <artifactId>petclinicapp-jpa</artifactId>
         <groupId>org.apache.causeway.starters</groupId>
         <version>2.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>simpleapp-jpa-module-visit</artifactId>
-    <name>SimpleApp (JPA) - Visit Module</name>
+    <artifactId>petclinicapp-jpa-module-visit</artifactId>
+    <name>petclinicapp (JPA) - Visit Module</name>
 
     <build>
         <resources>
@@ -37,7 +37,7 @@
 
         <dependency>
             <groupId>org.apache.causeway.starters</groupId>
-            <artifactId>simpleapp-jpa-module-petowner</artifactId>
+            <artifactId>petclinicapp-jpa-module-petowner</artifactId>
         </dependency>
 
         <dependency>

@@ -70,15 +70,17 @@ remove_marker() {
 }
 
 # Main logic for either creating or removing marker files
-for pomFile in $(find . -name pom.xml -print); do
-    if [ "$ACTION" == "v3" ]; then
-        create_marker "$pomFile"
-        mvn versions:update-parent -DparentVersion=3.1.0 -DgenerateBackupPoms=false
-        mvn versions:set -DnewVersion=3.1.0-SNAPSHOT -DgenerateBackupPoms=false
-    elif [ "$ACTION" == "v2" ]; then
-        remove_marker "$pomFile"
-        mvn versions:update-parent -DparentVersion=2.1.0 -DgenerateBackupPoms=false
-        mvn versions:set -DnewVersion=2.1.0-SNAPSHOT -DgenerateBackupPoms=false
-    fi
-done
+if [ "$ACTION" == "v3" ]; then
+    for pomFile in $(find . -name pom.xml -print); do
+      create_marker "$pomFile"
+    done
+    mvn versions:update-parent -DparentVersion=3.1.0 -DgenerateBackupPoms=false
+    mvn versions:set -DnewVersion=3.1.0-SNAPSHOT -DgenerateBackupPoms=false
+elif [ "$ACTION" == "v2" ]; then
+    for pomFile in $(find . -name pom.xml -print); do
+      remove_marker "$pomFile"
+    done
+    mvn versions:update-parent -DparentVersion=2.1.0 -DgenerateBackupPoms=false
+    mvn versions:set -DnewVersion=2.1.0-SNAPSHOT -DgenerateBackupPoms=false
+fi
 

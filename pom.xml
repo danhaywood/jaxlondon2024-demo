@@ -52,6 +52,12 @@
                     </dependency>
                 </dependencies>
             </plugin>
+            <plugin>
+                <groupId>io.opentelemetry.contrib</groupId>
+                <artifactId>opentelemetry-maven-extension</artifactId>
+                <version>1.14.0-alpha</version>
+                <extensions>true</extensions>
+            </plugin>
         </plugins>
     </build>
 
@@ -67,6 +73,11 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>petclinicapp-jpa-module-visit</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>petclinicapp-jpa-module-visit-tests</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
@@ -107,6 +118,7 @@
     <modules>
         <module>module-petowner</module>
         <module>module-visit</module>
+        <module>module-visit-tests</module>
         <module>webapp</module>
         <module>webapp-tests</module>
     </modules>

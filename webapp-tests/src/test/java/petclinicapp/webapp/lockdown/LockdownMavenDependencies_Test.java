@@ -19,14 +19,18 @@ import org.junit.jupiter.api.Test;
 
 import lombok.val;
 
+
 /**
- *
+ * prereqs:
+ * <pre>
+ *  sh generate-lockdown.sh
+ * </pre>
  */
 public class LockdownMavenDependencies_Test {
 
     @BeforeEach
     public void setup() {
-        Assumptions.assumeThat(System.getProperty("lockdown")).isNotNull();
+         Assumptions.assumeThat(System.getProperty("lockdown")).isNotNull();
     }
 
     @UseReporter(DiffReporter.class)

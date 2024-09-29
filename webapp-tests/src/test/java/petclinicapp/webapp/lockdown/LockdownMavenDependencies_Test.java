@@ -48,13 +48,13 @@ public class LockdownMavenDependencies_Test {
     private String read(final String goal) throws IOException {
         final URL resource = Resources.getResource(
                 getClass(),
-                String.format("%s.%s.actual.txt", getClass().getSimpleName(), goal));
+                "%s.%s.actual.txt".formatted(getClass().getSimpleName(), goal));
         return Resources.toString(resource, Charsets.UTF_8);
     }
 
     private static String sort(final String unsorted) {
-        val lineArr = unsorted.split("[\r\n]+");
-        val lineList = new ArrayList<>(Arrays.asList(lineArr));
+        final var lineArr = unsorted.split("[\r\n]+");
+        final var lineList = new ArrayList<>(Arrays.asList(lineArr));
         return lineList.stream()
                 .map(x -> sanitize(x))
                 .sorted()
@@ -65,7 +65,7 @@ public class LockdownMavenDependencies_Test {
     static Pattern pattern = Pattern.compile(regex);
 
     private static String sanitize(String input) {
-        val matcher = pattern.matcher(input);
+        final var matcher = pattern.matcher(input);
         return matcher.matches()
                 ? matcher.group("prefix")
                 : input;

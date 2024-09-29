@@ -3,13 +3,13 @@ package petclinicapp.modules.petowner.value;
 import java.io.Serializable;
 import java.util.regex.Pattern;
 
-import javax.persistence.Column;
+import jakarta.persistence.Column;
 
 import org.apache.causeway.commons.internal.base._Strings;
 
 import lombok.Getter;
 
-@javax.persistence.Embeddable
+@jakarta.persistence.Embeddable
 @org.apache.causeway.applib.annotation.Value
 @lombok.EqualsAndHashCode
 public class EmailAddress implements Serializable {

@@ -3,7 +3,7 @@ package petclinicapp.modules.visit.fixture;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import org.apache.causeway.applib.services.clock.ClockService;
 import org.apache.causeway.applib.services.registry.ServiceRegistry;

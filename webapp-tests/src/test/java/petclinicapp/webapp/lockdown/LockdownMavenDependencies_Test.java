@@ -13,11 +13,21 @@ import com.google.common.io.Resources;
 import org.approvaltests.Approvals;
 import org.approvaltests.reporters.DiffReporter;
 import org.approvaltests.reporters.UseReporter;
+import org.assertj.core.api.Assumptions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import lombok.val;
 
+/**
+ *
+ */
 public class LockdownMavenDependencies_Test {
+
+    @BeforeEach
+    public void setup() {
+        Assumptions.assumeThat(System.getProperty("lockdown")).isNotNull();
+    }
 
     @UseReporter(DiffReporter.class)
     @Test

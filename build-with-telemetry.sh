@@ -1,1 +1,2 @@
-mvnd clean install -Dotel.traces.exporter=otlp
+echo mvn clean install -Dtelemetry -Dotel.traces.exporter=otlp $*
+mvn clean install -Dtelemetry -Dotel.traces.exporter=otlp $*
